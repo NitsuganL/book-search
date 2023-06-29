@@ -1,26 +1,32 @@
 <!-- getallbook.blade.php -->
 
 <html>
-<head style="color: rgb(10, 0, 53)">
+<head>
     <title>All Books</title>
     <style>
        body{
-        background-color:rgb(0, 94, 156)
+            background-color:rgb(32, 33, 36);  
+            color: white;
        }
+       
         .card-container {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
+            background-color: rgb(32, 33, 36);
+            border-radius: 10px;
         }
 
         .card {
-            width: 300px;
-            padding: 20px;
+            width: 400px;
+            padding: 60px;
             margin: 20px;
-            border: 1px solid #ddd;
+            border: 1px solid #454549;
             border-radius: 4px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            background-color: #fff;
+            background-color: rgb(26, 34, 61);
+            color:rgb(221, 239, 255);
+            font-family: Arial, Helvetica, sans-serif;
         }
 
         .card-title {
@@ -59,6 +65,7 @@
             color: white;
             border: none;
             cursor: pointer;
+            border-radius: 2px;
         }
         .search-container{
           display: flex;
@@ -89,19 +96,22 @@
 </head>
 <body>
     <center>
-    <h1 >All Books</h1>
+    <h1>All Books</h1>
 </center>
      <div class="search-form" >
+        <p>Search for Book ID: </p>
           <input type="text" id="search-input" class="search-input" placeholder="Enter Book ID">
           <button id="search-button" class="search-button">Search</button>
      </div>
 
-    <div class="card-container" style="background-color:rgb(0, 13, 37)">
+    <div class="card-container">
         @foreach ($books as $book)
         <div class="card">
-            <h2 class="card-title">{{ $book->title }}</h2>
+            <center>
+            <h2 class="card-title"><u>{{ $book->title }}</u></h2>
+        </center>   
             <div class="card-details">
-                <p><span class="card-label">Book ID:</span> <span class="card-value">{{ $book->id }}</span></p>
+                <p><span class="card-label">Book ID:</span> <span class="card-value"><u>{{ $book->id }}</u></span></p>
                 <p><span class="card-label">Author:</span> <span class="card-value">{{ $book->author }}</span></p>
                 <p><span class="card-label">Publisher:</span> <span class="card-value">{{ $book->publisher }}</span></p>
                 <p><span class="card-label">Publication Date:</span> <span class="card-value">{{ $book->publication_date }}</span></p>

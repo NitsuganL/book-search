@@ -4,18 +4,23 @@
 <head>
     <title>Search by ID</title>
     <style>
-       body {
-             background-color:rgb(0, 94, 156);
-        }
+       body{
+            background-color:rgb(32, 33, 36);  
+            color: white;
+       }
         .card {
-            width: 300px;
-            padding: 20px;
+            width: 400px;
+            padding: 60px;
             margin: 20px;
-            border: 1px solid #ddd;
+            border: 1px solid #454549;
             border-radius: 4px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            background-color: #fff;
+            background-color: rgb(26, 34, 61);
+            color:rgb(221, 239, 255);
+            font-family: Arial, Helvetica, sans-serif;
         }
+        
+        
 
         .card-title {
             font-size: 20px;
@@ -38,6 +43,8 @@
           justify-content: center;
           align-items: center;
           height: 100vh;
+          background-color: rgb(32, 33, 36);
+          border-radius: 10px;
         }
         .search-container{
           display: flex;
@@ -78,12 +85,14 @@
     
      
 
-     <div class="card-cont" style="background-color:rgb(0, 13, 37)">
+     <div class="card-cont">
           <div class="card">
                @if ($book)
-               <h2 class="card-title">{{ $book->title }}</h2>
-               <div class="card-details">
-                   <p><span class="card-label">Book ID:</span> <span class="card-value">{{ $book->id }}</span></p>
+              <center>
+            <h2 class="card-title"><u>{{ $book->title }}</u></h2>
+        </center>   
+            <div class="card-details">
+                   <p><span class="card-label">Book ID:</span> <span class="card-value"><u>{{ $book->id }}</u></span></p>
                    <p><span class="card-label">Author:</span> <span class="card-value">{{ $book->author }}</span></p>
                    <p><span class="card-label">Publisher:</span> <span class="card-value">{{ $book->publisher }}</span></p>
                    <p><span class="card-label">Publication Date:</span> <span class="card-value">{{ $book->publication_date }}</span></p>
