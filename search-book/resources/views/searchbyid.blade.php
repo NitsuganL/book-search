@@ -50,7 +50,6 @@
           display: flex;
           justify-content: center;
           align-items: center;
-          /* height: 100vh; */
         }
         .search-form {
             display: flex;

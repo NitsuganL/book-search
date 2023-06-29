@@ -26,7 +26,7 @@
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             background-color: rgb(26, 34, 61);
             color:rgb(221, 239, 255);
-            font-family: Arial, Helvetica, sans-serif;
+            font-family: "Lucida Console", "Courier New", monospace;
         }
 
         .card-title {
@@ -71,23 +71,11 @@
           display: flex;
           justify-content: center;
           align-items: center;
-          /* height: 100vh; */
         }
-        /* .search-form {
-            display: flex;
-            justify-content: center;
-            margin-top: 20px;
-        }
-
-        .search-input {
-            width: 200px;
-            padding: 5px;
-            margin-right: 10px;
-        } */
-
+      
         .search-button {
             padding: 5px 10px;
-            background-color: #4CAF50;
+            background-color: #29a0f0;
             color: white;
             border: none;
             cursor: pointer;
